@@ -4,5 +4,5 @@ import { Dump } from './dump';
 
 test('renders Dump without crash', () => {
 
-  expect(true).toBe(true);
+  expect(false).toBe(true);
 });
