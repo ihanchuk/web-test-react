@@ -1,4 +1,5 @@
-import { If } from "../blocks/if"
+import { If } from "../blocks/if";
+import { iconsArray } from "../img/icons";
 
 export const Button = ({
         onClick, 
@@ -21,7 +22,7 @@ export const Button = ({
                 {...rest}
                 >
                     <If condition={icon}>
-                        <img src={`/${icon}.png`} width="15" alt="add new"/>
+                        <img src={iconsArray[icon]} width="15" alt="add new"/>
                     </If>
                     {children} {label}
             </button>
