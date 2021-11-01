@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import './scss/variables';
+@import './scss/form-elements';
+@import './scss/layout.scss';
+@import './scss/fonts.scss';
+
+$primary-color: rgb(82, 82, 82);
+$border-color: rgb(171, 207, 41);
+
+* { box-sizing:border-box; }
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  color: $border-color;
+}
+
+.layout {
+  border:15px solid #4b4b54;
+
+}
+
+// document.querySelector("#root > web-test").shadowRoot.querySelector("div > div > div")

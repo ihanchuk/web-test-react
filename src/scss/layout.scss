@@ -1,0 +1,70 @@
+.layout {
+
+      .wrapper{
+        background: #ccc;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content {
+        flex: 1;
+        background: #999;
+        display: flex;
+        color: #000;
+      }
+
+      .columns{
+        display: flex;
+         width: 100vw;
+      }
+
+      .main{
+        flex: 2;
+        background: #f8fcfe;
+        padding: 20px;
+        overflow-y: scroll;
+        min-height:100vh;
+
+        .form__controlls_submit {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .project__info {
+          position: relative;
+          background: white;
+          border: 1px solid #5bcbf2;
+          padding: 20px;
+          border-radius: 3px;
+          box-shadow: 0 0 12px #d6d6d6;
+          margin-bottom: 20px;
+
+          .project__info__controll__pane {
+              position:relative;
+              .project__info__controll__remove {
+                position: absolute;
+                z-index:1;
+                top:-90px;
+                right: -30px;
+              }
+            }
+
+            .project__info__duration__period {
+              display: flex;
+              justify-content: space-between;
+
+              .project__info__pane {
+                max-width: 35%;
+              }
+            }
+        }
+
+      }
+      
+      .sidebar{
+        background:#e8e8e8;
+        padding: 20px;
+        flex:1;
+      }
+      
+}

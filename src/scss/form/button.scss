@@ -1,0 +1,84 @@
+.control-button {
+    display: inline-block;
+
+    button {
+        border: none;
+        border-radius: 2px;
+        font-size: 14px;
+        cursor: pointer;
+        color: $white-color;
+        box-shadow: 0 0 7px $shadow-grey;
+        outline: none;
+
+        img{ 
+            float: left;
+            margin-right:15px;
+            width:15px;
+        }
+    }
+
+    button:disabled {
+        background-color: rgb(98, 95, 109);
+        cursor: no-drop;
+        box-shadow: none;
+    }
+
+    button:disabled:hover {
+        background-color: rgb(98, 95, 109);
+        cursor: no-drop;
+    }
+
+
+    .icon__remove {
+        border-radius: 50%;
+        width:40px;
+        background:white;
+        padding:12px;
+    }
+
+    .icon__destroy {
+        background:white;
+        padding:12px;
+        padding:0;
+        box-shadow: none;
+    }
+
+    .primary {
+        padding: 14px 20px;
+        background-color: $blue-color;
+    }
+
+    .secondary:hover {
+        padding: 14px 20px;
+        background-color: $olive-color;
+        background:$olive-color linear-gradient(circle, transparent 1%, $regular-dark 1%) center/15000%;
+    }
+
+    .secondary {
+        padding: 14px 20px;
+        background-color: $olive-color;
+        box-shadow: none;
+    }
+
+    .regular {
+        padding: 12px 18px;
+        background-color: $blue-color;
+        color: white;
+    }
+
+    .ripple {
+        background-position: center;
+        transition: background 0.8s;
+    }
+
+    .ripple:hover {
+        background:$dark-blue radial-gradient(circle, transparent 1%, $light-blue 1%) center/15000%;
+    }
+
+    .ripple:active {
+        background-color: $ripple-blue;
+        background-size: 100%;
+        transition: background 0s;
+    }
+    
+}

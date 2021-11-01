@@ -1,0 +1,17 @@
+.tag__controll {
+    background: white;
+    border-radius: 23px;
+    padding:10px 20px 10px 10px;
+    display: inline-block;
+    margin: 10px 10px 10px 0;
+    box-shadow: 0 0 10px #d6d6d6;
+
+    .tag__input {
+        margin: 0 10px 0 10px;
+        border: none;
+        border-bottom: 1px solid rgb(209, 207, 207);
+        outline: none;
+        font-family: inherit;
+        font-size:15px;
+    }
+}
