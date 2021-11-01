@@ -1,11 +1,13 @@
 name: Build & deploy
-on:
+on:  
   push:
+  pull_request:
     branches:
       - master
 jobs:
   Build:
     name: Build
+    if: github.event.pull_request.created == true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -15,9 +17,34 @@ jobs:
         with:
           node-version: 14.x
       - name: Install NPM packages
-        run: npm ci  
+        run: npm ci
       - name: Build project
-        run: CI='' npm run build
+        run: CI='' npm run build    
+      - name: Build project
+        run: npm run build
+      - name: Disable jekyll
+        run: touch ./build/.nojekyll
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./build
+  Deploy:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Install NPM packages
+        run: npm ci
+      - name: Build project
+        run: CI='' npm run build     
+      - name: Build project
+        run: npm run build
       - name: Run tests
         run: npm run test   
       - name: Disable jekyll
