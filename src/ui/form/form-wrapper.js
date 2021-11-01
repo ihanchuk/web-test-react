@@ -8,6 +8,11 @@ const FormContextProvider = ({children, val}) => {
         {children}
     </FormContext.Provider>
 }
+/**
+ * 
+ * @param {initialValues} initial values of Form
+ * @returns 
+ */
 
 export const FormikContext = ({initialValues, children, onFormSubmit, onProcess}) => {
     const {
