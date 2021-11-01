@@ -7,7 +7,8 @@ const mockData = JSON.stringify({
             c:{
                 testValue: 'James Bond',
                 testArray: ['Episode 1', 'Episode 2', 'Episode 3']
-            }
+            },
+            d: [1,4,5]
         }
     },
     arr: ['First', 'Second', 'Last']
