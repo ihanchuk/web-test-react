@@ -19,7 +19,7 @@ jobs:
       - name: set env for CI
         run: export process.env.CI=false   
       - name: Build project
-        run: npm run build
+        run: CI='' npm run build
       - name: Run tests
         run: npm run test   
       - name: Disable jekyll
