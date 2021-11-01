@@ -1,9 +1,9 @@
 name: Build & deploy
 on:  
   push:
-  pull_request:
     branches:
       - master
+  pull_request:
 jobs:
   Build:
     name: Build
