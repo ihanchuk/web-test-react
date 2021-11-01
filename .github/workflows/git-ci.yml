@@ -15,9 +15,7 @@ jobs:
         with:
           node-version: 14.x
       - name: Install NPM packages
-        run: npm ci
-      - name: set env for CI
-        run: export process.env.CI=false   
+        run: npm ci  
       - name: Build project
         run: CI='' npm run build
       - name: Run tests
