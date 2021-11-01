@@ -1,8 +1,5 @@
 name: Build & deploy
 on:  
-  push:
-    branches:
-      - master
   pull_request:
 jobs:
   Build:
@@ -33,6 +30,7 @@ jobs:
           publish_dir: ./build
   Deploy:
     name: Build
+    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'master' 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
