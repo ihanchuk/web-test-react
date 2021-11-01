@@ -9,7 +9,7 @@ export const ProjectInfo = ({path='', index, base}) => {
             <h4>Project Details:</h4>
             <div className="project__info__controll__pane">
                 <div className="project__info__controll__remove">
-                    <RemoveElement path={base} index={index} />
+                    <RemoveElement path={base} index={index} alt="remove note" data-testid="remove-note"/>
                 </div> 
             </div>
             <div className="project__info__general_info">

@@ -11,14 +11,14 @@ export const FormControlls = () => {
     const notes = useFormValue(".notes");
     const reloadForm = useCallback(() => {revertForm()});
     
-    return <div className="form__controlls_submit">
+    return <div className="form__controlls_submit" data-testid="form-controlls">
         <If condition={notes.length > 0}>
             <Button type="submit" disabled={!isOk}>Send Data</Button>
             <Button onClick={reloadForm} buttonClass="secondary"> Cancel </Button>
         </If>
         <If condition={notes.length == 0}>
             <div>
-                <h3>Please add some notes</h3>
+                <h3>Please add some notes or Revert form</h3>
                 <p> It makes no sense to send form without project notes!</p>
             </div>
         </If>
