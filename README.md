@@ -79,6 +79,3 @@ Callback function. Takes values as param.
 ##### onProcess
 Processor function. This function is executed right before Form data is submitted,
 Takes values as param. This is final step before form is submitted and last chance to execute some data manipulation.
-
-test
-
