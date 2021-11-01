@@ -22,8 +22,8 @@ jobs:
         run: npm run test   
       - name: Disable jekyll
         run: touch ./build/.nojekyll
-      - name: echo "process.env.CI = false" > ./build/.env
-        run: touch ./build/.nojekyll
+      - name: set env for CI
+        run: echo "process.env.CI = false" > ./.env
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
